@@ -1,0 +1,14 @@
+{
+  "name": "line-notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "kento.yamada",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "querystring": "^0.2.0",
+    "feedparser": "^2.2.10",
+    "request": "^2.88.2"
+  }
+}
