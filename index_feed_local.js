@@ -11,7 +11,7 @@ var feedparser = new FeedParser({});
 
 var items = [];
 
-req.on('response', function (res) {
+req.on('response', function () {
     this.pipe(feedparser);
 });
 
@@ -20,9 +20,11 @@ feedparser.on('meta', function (meta) {
 });
 
 feedparser.on('readable', function () {
-    while (item = this.read()) {
+    item = this.read();
+    while (item) {
         // console.log(item);
         items.push(item);
+        item = this.read();
     }
 });
 
